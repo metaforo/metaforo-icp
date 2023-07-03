@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "mf_backend": {
+      "main": "src/mf_backend/main.mo",
+      "type": "motoko"
+    },
+    "mf_frontend": {
+      "dependencies": [
+        "mf_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/mf_frontend/src/index.html"
+      },
+      "source": [
+        "src/mf_frontend/assets",
+        "dist/mf_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
